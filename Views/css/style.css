@@ -1,0 +1,366 @@
+    /*
+        màu của chữ trong layout header:  color: rgb(223, 90, 90); đỏ nhạt
+        màu hồng nhạt của background rgb(223, 203, 203) đậm hơn 1 chút rgb(240, 178, 178);
+        hệ màu thứ 2 radial-gradient(rgb(255, 255, 255), rgb(26, 187, 166): xanh nhạt
+        */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /*set up thanh navbar*/
+    
+    .navbar {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+    
+    nav {
+        font-size: 20px;
+        flex: 1;
+        text-align: right;
+    }
+    
+    nav ul {
+        display: inline-block;
+        list-style-type: none;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    /*set up màu cho Chữ tag a và p*/
+    
+    a {
+        text-decoration: none;
+        color: rgb(223, 90, 90);
+    }
+    
+    p {
+        color: rgb(223, 90, 90);
+    }
+    
+    .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    /*set up thanh row và img của row*/
+    
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .col-2 {
+        flex-basis: 50%;
+        min-width: 300px;
+    }
+    
+    .col-2 img {
+        max-width: 100%;
+        min-width: 120%;
+        padding: 100px 0;
+    }
+    
+    .col-2 h1 {
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0;
+    }
+    /*set button tromg row*/
+    
+    .btn {
+        display: inline-block;
+        background: #ff523b;
+        color: #fff;
+        padding: 8px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    }
+    
+    .btn:hover {
+        background: #14a6ca;
+        border: 1px solid;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+        outline-color: rgba(255, 255, 255, 0);
+        outline-offset: 15px;
+        text-shadow: 1px 1px 2px #427388;
+    }
+    /*set header*/
+    
+    .header {
+        background: radial-gradient(rgb(190, 175, 175), #ffd6ff);
+    }
+    
+    .header .row {
+        margin-top: 70px;
+    }
+    /*set cho categories*/
+    
+    .categories {
+        margin: 70px 0;
+    }
+    
+    .col-3 {
+        flex-basis: 30%;
+        min-width: 250px;
+        margin-bottom: 30px;
+    }
+    
+    .col-3 img {
+        width: 100%;
+    }
+    
+    .small-container {
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .col-4 {
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transform: transform 0.5s;
+    }
+    
+    .col-4 img {
+        width: 100%;
+    }
+    /*Dấu gạch ngang Dưới Chữ Feature */
+    
+    .title {
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: rgb(110, 110, 110);
+    }
+    
+    .title::after {
+        content: '';
+        background: rgb(240, 131, 131);
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate3d(-50px, 0, 0);
+    }
+    
+    h4 {
+        color: #555;
+        font-weight: normal;
+    }
+    
+    .col-4 p {
+        font-size: 16px;
+    }
+    
+    .rating {
+        color: #ff523b;
+    }
+    /*Hover effect cho category */
+    
+    .col-4:hover {
+        transform: translate3d(5px, -5px, 10px);
+    }
+    /*setup offer*/
+    
+    .offer {
+        background: radial-gradient(rgb(255, 255, 255), rgb(26, 187, 166));
+        margin-top: 80px;
+        padding: 30px 0;
+    }
+    
+    col-2 .offer-img {
+        padding: 50px;
+    }
+    
+    .small {
+        color: #555
+    }
+    /*---testimonial---*/
+    
+    .testimonial {
+        padding-top: 100px;
+    }
+    
+    .testimonial .col-3 {
+        text-align: center;
+        padding: 40px 20px;
+        box-shadow: 0 0 20px 0px rgba(0, 1, 1, 1, 0.1);
+        cursor: pointer;
+        transition: transform 0.5s;
+    }
+    
+    .testimonial .col-3 img {
+        width: 50px;
+        margin-top: 20px;
+        border-radius: 100%;
+    }
+    
+    .testimonial .col-3:hover {
+        transform: translate3d(0, -10px, 0);
+    }
+    
+    .fa .fa-quote-left {
+        font-size: 12px;
+        color: #ff523b;
+    }
+    
+    .col-3 p {
+        font-size: 16px;
+        margin: 12px 0;
+        color: #777;
+    }
+    
+    .testimonial .col-3 h3 {
+        font-weight: 600;
+        color: #555;
+        font-size: 16px;
+    }
+    /*---testimonial---*/
+    
+    .brands {
+        margin: 100px auto;
+    }
+    
+    .col-5 {
+        width: 160px;
+    }
+    
+    .col-5 img {
+        width: 100%;
+        cursor: pointer;
+        filter: grayscale(100%);
+    }
+    
+    .col-5 img:hover {
+        filter: grayscale(0%)
+    }
+    /*---footer---*/
+    
+    .footer {
+        background: #000;
+        color: #8a8a8a;
+        font-size: 14px;
+        padding: 60px 0 20px;
+    }
+    
+    .footer p {
+        color: #8a8a8a;
+    }
+    
+    .footer h3 {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4,
+    .footer-col-5 {
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-col-1 {
+        flex-basis: 30%;
+    }
+    
+    .footer-col-2 {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .footer-col-2 img {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-col-3,
+    .footer-col-4 {
+        flex-basis: 12%;
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    /*set up Logo cho app*/
+    
+    .app-logo {
+        margin-top: 20px;
+    }
+    
+    .app-logo img {
+        width: 140px;
+    }
+    
+    .footer hr {
+        border: none;
+        background: #b5b5b5;
+        height: 1px;
+        margin: 20px 0;
+    }
+    
+    .copyright {
+        text-align: center;
+    }
+    /*set up Button Menu ở Header*/
+    
+    .menu-icon {
+        width: 28px;
+        margin-left: 20px;
+        display: none;
+    }
+    /* media query for menu*/
+    
+    @media only screen and (max-width:1080px) {
+        nav ul {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: rgb(204, 149, 209);
+            width: 100%;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+        nav ul li {
+            display: block;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+        }
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+    }
+    
+    @media only screen and (max-width:600px) {
+        .row {
+            text-align: center;
+        }
+        .col-2,
+        .col-3,
+        .col-4 {
+            flex-basis: 100%;
+        }
+    }
