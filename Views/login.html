@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login-Online Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--Add bootsrap 4-->
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    -->
+    <!--link css-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/products.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!--link js-->
+    <script type="text/javascript" src="js/menu.js"></script>
+    <!--link lấy font trên mạng-->
+    <link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+    <!--link logo lấy từ fontawesome-->
+    <script src="https://kit.fontawesome.com/649a628862.js" crossorigin="anonymous">
+    </script>
+</head>
+<!----header----->
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/dusk.final_300x300.png" width="125px">
+                </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">Contract</a>
+                    </li>
+                    <li>
+                        <a href="">Login</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="images/cart.png" alt="" width="30px" height="30px">
+            </a>
+            <img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+        </div>
+    </div>
+</div>
+<!----Login page----->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/1.png" alt="" width="100%" height="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type=" text " placeholder="Username ">
+                        <input type="password " placeholder="Password ">
+                        <input type="checkbox" class="checkBox">Remember Secsion</input>
+                        <button type="submit " class="btn ">Login</button>
+                        <a href=" ">Forgot Password</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text " placeholder="Username ">
+                        <input type="email " placeholder="Email ">
+                        <input type="password " placeholder="Password ">
+                        <button type="submit " class="btn ">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----footer----->
+<div class="footer ">
+    <div class="container ">
+        <div class="row ">
+            <div class="footer-col-1 ">
+                <h3>Download Our App</h3>
+                <p>Download App for Androoid and Ios Phone</p>
+                <div class="app-logo ">
+                    <img src="images/app-store.png " alt=" ">
+                    <img src="images/play-store.png " alt=" ">
+                </div>
+            </div>
+            <div class="footer-col-2 ">
+                <img src="images/logo-white.png " alt=" ">
+                <p>Our Purpose is to sustainably make the please and benifits of Outfit accessible to the many </p>
+            </div>
+            <div class="footer-col-3 ">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blogs Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affilicate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4 ">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twiter</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright ">Copyright 2020 - East Tutorial</p>
+        <p class="copyright ">Copyright and Rewrite By LocNguyen</p>
+    </div>
+</div>
+<!----js for MenuToggle()----->
+<script>
+    var MenuItems = document.getElementById("MenuItems ");
+    MenuItems.style.maxHeight = "0px ";
+
+    function menuToggle() {
+        if (MenuItems.style.maxHeight == "0px ") {
+            MenuItems.style.maxHeight = "200px ";
+        } else {
+            MenuItems.style.maxHeight = "0px ";
+        }
+    }
+</script>
+<!----js for toggle Form----->
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+
+    function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+
+    function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
